@@ -1,0 +1,19 @@
+/* Start local-toc */
+.local-toc > ul > li > a {
+  display:none;
+}
+
+.local-toc ul > li > ul {
+  display: none;
+}
+
+.local-toc > ul > li > ul {
+  display: block;
+}
+.local-toc ul {
+  padding: 0 0 0 1em;
+}
+.local-toc li {
+  list-style-type: none;
+}
+/* End local-toc */
