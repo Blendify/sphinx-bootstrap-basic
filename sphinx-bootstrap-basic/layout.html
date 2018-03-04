@@ -15,13 +15,26 @@
     <li class="breadcrumb-item"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></li>
     {%- endblock %}
     {%- for doc in parents %}
-      <li class="breadcrumb-item"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
+      <li class="breadcrumb-item"><a href="{{ doc.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ doc.title }}</a></li>
     {%- endfor %}
     <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
   </ol>
 </nav>
-{{ super() }}
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+      {%- block sidebar1 %}{{ sidebar() }}{% endblock %}
+    </div>
+    <div class="col-md-auto">
+      {% block body %} {% endblock %}
+    </div>
+    <div class="col col-lg-2">
+      <p>THIS IS THE CURRENT PAGE NAV BAR</p>
+    </div>
+  </div>
 {%- endblock %}
 
+{# Unset blocks #}
 {%- block relbar1 %}{% endblock %}
 {%- block relbar2 %}{% endblock %}
+{%- block sidebar2 %}{% endblock %}
