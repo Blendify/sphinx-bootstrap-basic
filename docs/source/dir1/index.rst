@@ -1,7 +1,7 @@
 
-*********
-Test Page
-*********
+*******
+Index 2
+*******
 
 .. toctree::
    :maxdepth: 2
