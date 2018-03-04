@@ -31,6 +31,7 @@
       {% block body %} {% endblock %}
     </div>
     <div class="col col-2">
+      {%- block sidebar2extra %}{% endblock %}
       <h3>On this page:</h3>
       <div class="local-toc">{{ toc }}</div>
     </div>
