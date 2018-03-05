@@ -1,4 +1,8 @@
-# sphinx-bootstrap-basic
+
+**********************
+sphinx-bootstrap-basic
+**********************
+
 A very minimal sphinx html theme using bootstrap
 
 The idea of this theme is to only serve as a template for hosting documentation.
