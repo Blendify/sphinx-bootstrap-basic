@@ -12,6 +12,7 @@ Welcome to sphinx-bootstrap-basic's documentation!
 
    page.rst
    dir1/index.rst
+   contributing.rst
 
 Indices and tables
 ==================
