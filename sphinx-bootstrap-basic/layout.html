@@ -25,15 +25,25 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col col-2">
-      {%- block sidebar1 %}{{ sidebar() }}{% endblock %}
+      {%- block sidebar1 %}
+      {%- include "searchbox.html" %}
+      <div class="side-nav" data-spy="affix" role="navigation" aria-label="main navigation">
+      {{ toctree(maxdepth=theme_navigation_depth|int,
+                  collapse=theme_collapse_navigation|tobool,
+                  includehidden=theme_includehidden|tobool,
+                  titles_only=theme_titles_only|tobool) }}
+      </div>
+      {%- endblock %}
     </div>
     <div class="col col-xl-8">
       {% block body %} {% endblock %}
     </div>
     <div class="col col-2">
-      {%- block sidebar2extra %}{% endblock %}
+      {%- block sidebar2 %}
       <h3>On this page:</h3>
       <div class="local-toc">{{ toc }}</div>
+      {%- endblock %}
+      {%- block sidebar2extra %}{% endblock %}
     </div>
   </div>
 {%- endblock %}
@@ -41,4 +51,3 @@
 {# Unset blocks #}
 {%- block relbar1 %}{% endblock %}
 {%- block relbar2 %}{% endblock %}
-{%- block sidebar2 %}{% endblock %}
